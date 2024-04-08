@@ -201,8 +201,7 @@ public class PioneerAnnotationUtils {
 			return AnnotationSupport.findAnnotation(element, annotationType).stream().collect(toUnmodifiableList());
 	}
 
-	private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, Class<A> annotationType,
-			boolean findRepeated, boolean findAllEnclosing) {
+	private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria<A> criteria) {
 		if (type.isEmpty())
 			return Stream.empty();
 
@@ -210,14 +209,13 @@ public class PioneerAnnotationUtils {
 		if (!findAllEnclosing && !onThisClass.isEmpty())
 			return onThisClass.stream();
 
-		List<A> onClass = findOnType(type.get(), annotationType, findRepeated, findAllEnclosing);
-		Stream<A> onParentClass = findOnOuterClasses(type.map(Class::getEnclosingClass), annotationType, findRepeated,
+		List<A> onClass = findOnType(type.get(), criteria);
+		Stream<A> onParentClass = findOnOuterClasses(type.map(Class::getEnclosingClass), criteria,
 			findAllEnclosing);
 		return Stream.concat(onClass.stream(), onParentClass);
 	}
 
-	private static <A extends Annotation> List<A> findOnType(Class<?> element, Class<A> annotationType,
-			boolean findRepeated, boolean findAllEnclosing) {
+	private static <A extends Annotation> List<A> findOnType(Class<?> element, AnnotationSearchCriteria<A> criteria) {
 		if (element == null || element == Object.class)
 			return List.of();
 		if (findRepeated)
@@ -241,7 +239,7 @@ public class PioneerAnnotationUtils {
 						.distinct()
 						.collect(toUnmodifiableList());
 		}
-		List<A> onSuperclass = findOnType(element.getSuperclass(), annotationType, false, findAllEnclosing);
+		List<A> onSuperclass = findOnType(element.getSuperclass(), criteria);
 		return Stream
 				.of(onElement, onInterfaces, onSuperclass)
 				.flatMap(Collection::stream)
