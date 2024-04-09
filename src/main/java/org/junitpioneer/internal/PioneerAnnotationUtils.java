@@ -153,77 +153,77 @@ public class PioneerAnnotationUtils {
 		}
 	}
 
-	public static boolean isContainerAnnotation(Annotation annotation) {
-		// See https://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.6.3
+public static <A extends Annotation> Stream<A> findAnnotations(ExtensionContext context, AnnotationSearchCriteria criteria) {
+
 		try {
 			Method value = annotation.annotationType().getDeclaredMethod("value");
 			return value.getReturnType().isArray() && value.getReturnType().getComponentType().isAnnotation()
 					&& isContainerAnnotationOf(annotation, value.getReturnType().getComponentType());
 		}
 		catch (NoSuchMethodException e) {
-			return false;
+			.map(method -> findOnMethod(method, criteria.getAnnotationType(), criteria.isFindRepeated()))
 		}
-	}
-
-	private static boolean isContainerAnnotationOf(Annotation potentialContainer, Class<?> potentialRepeatable) {
-		Repeatable repeatable = potentialRepeatable.getAnnotation(Repeatable.class);
+			.orElse(List.of());
+		if (!criteria.isFindAllEnclosing() && !onMethod.isEmpty())
+			return onMethod.stream();
+		Stream<A> onClass = findOnOuterClasses(context.getTestClass(), criteria.getAnnotationType(), criteria.isFindRepeated(), criteria.isFindAllEnclosing());
 		return repeatable != null && repeatable.value().equals(potentialContainer.annotationType());
-	}
+		return Stream.concat(onMethod.stream(), onClass);
 
 	static <A extends Annotation> Stream<A> findAnnotations(ExtensionContext context, Class<A> annotationType,
-			boolean findRepeated, boolean findAllEnclosing) {
-		/*
+private static <A extends Annotation> List<A> findOnMethod(Method element, AnnotationSearchCriteria criteria) {
+
 		 * Implementation notes:
-		 *
-		 * This method starts with the specified element and, if not happy with the results (depends on the
+		if (criteria.isFindRepeated())
+			return AnnotationSupport.findRepeatableAnnotations(element, criteria.getAnnotationType());
 		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
-		 * through enclosing types (if required by the arguments, thus handling _enclosing-presence_) and
+			return AnnotationSupport.findAnnotation(element, criteria.getAnnotationType()).stream().collect(toUnmodifiableList());
 		 * eventually calls either `AnnotationSupport::findRepeatableAnnotations` or
 		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
-		 * Both of these methods check for _meta-presence_ and _indirect presence_.
-		 */
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+
 		List<A> onMethod = context
 				.getTestMethod()
-				.map(method -> findOnMethod(method, annotationType, findRepeated))
-				.orElse(List.of());
-		if (!findAllEnclosing && !onMethod.isEmpty())
-			return onMethod.stream();
-		Stream<A> onClass = findOnOuterClasses(context.getTestClass(), annotationType, findRepeated, findAllEnclosing);
-
-		return Stream.concat(onMethod.stream(), onClass);
-	}
-
-	private static <A extends Annotation> List<A> findOnMethod(Method element, Class<A> annotationType,
-			boolean findRepeated) {
-		if (findRepeated)
-			return AnnotationSupport.findRepeatableAnnotations(element, annotationType);
-		else
-			return AnnotationSupport.findAnnotation(element, annotationType).stream().collect(toUnmodifiableList());
-	}
-
-	private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, Class<A> annotationType,
-			boolean findRepeated, boolean findAllEnclosing) {
-		if (type.isEmpty())
-			return Stream.empty();
-
-		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(annotationType));
-		if (!findAllEnclosing && !onThisClass.isEmpty())
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		if (!criteria.isFindAllEnclosing() && !onThisClass.isEmpty())
 			return onThisClass.stream();
-
-		List<A> onClass = findOnType(type.get(), annotationType, findRepeated, findAllEnclosing);
-		Stream<A> onParentClass = findOnOuterClasses(type.map(Class::getEnclosingClass), annotationType, findRepeated,
-			findAllEnclosing);
+			return onMethod.stream();
+		List<A> onClass = findOnType(type.get(), criteria.getAnnotationType(), criteria.isFindRepeated(), criteria.isFindAllEnclosing());
+		Stream<A> onParentClass = findOnOuterClasses(type.map(Class::getEnclosingClass), criteria);
 		return Stream.concat(onClass.stream(), onParentClass);
 	}
 
-	private static <A extends Annotation> List<A> findOnType(Class<?> element, Class<A> annotationType,
-			boolean findRepeated, boolean findAllEnclosing) {
+private static <A extends Annotation> List<A> findOnType(Class<?> element, AnnotationSearchCriteria criteria) {
+
+		if (findRepeated)
 		if (element == null || element == Object.class)
 			return List.of();
-		if (findRepeated)
-			return AnnotationSupport.findRepeatableAnnotations(element, annotationType);
+		if (criteria.isFindRepeated())
+			return AnnotationSupport.findRepeatableAnnotations(element, criteria.getAnnotationType());
 
 		List<A> onElement = AnnotationSupport
+				.findAnnotation(element, criteria.getAnnotationType())
+				.stream()
+				.collect(toUnmodifiableList());
+		List<A> onInterfaces = Arrays
+				.stream(element.getInterfaces())
+				.flatMap(clazz -> findOnType(clazz, criteria).stream())
+				.collect(toUnmodifiableList());
+		if (!criteria.getAnnotationType().isAnnotationPresent(Inherited.class)) {
+			if (!criteria.isFindAllEnclosing())
+				return onElement;
+			else
+				return Stream
+						.of(onElement, onInterfaces)
+						.flatMap(Collection::stream)
+						.distinct()
+						.collect(toUnmodifiableList());
+		List<A> onSuperclass = findOnType(element.getSuperclass(), criteria);
+		return Stream
+				.of(onElement, onInterfaces, onSuperclass)
+				.flatMap(Collection::stream)
+				.distinct()
+				.collect(toUnmodifiableList());
 				.findAnnotation(element, annotationType)
 				.stream()
 				.collect(toUnmodifiableList());

@@ -1,0 +1,321 @@
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:processResources NO-SOURCE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+
+> Task :compileJava FAILED
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:164: error: illegal start of expression
+			.map(method -> findOnMethod(method, criteria.getAnnotationType(), criteria.isFindRepeated()))
+			^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:164: error: ';' expected
+			.map(method -> findOnMethod(method, criteria.getAnnotationType(), criteria.isFindRepeated()))
+			                                                                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:166: error: illegal start of expression
+			.orElse(List.of());
+			^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:173: error: illegal start of expression
+	static <A extends Annotation> Stream<A> findAnnotations(ExtensionContext context, Class<A> annotationType,
+	^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:174: error: modifier private not allowed here
+private static <A extends Annotation> List<A> findOnMethod(Method element, AnnotationSearchCriteria criteria) {
+               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:174: error: > expected
+private static <A extends Annotation> List<A> findOnMethod(Method element, AnnotationSearchCriteria criteria) {
+                  ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:174: error: invalid method declaration; return type required
+private static <A extends Annotation> List<A> findOnMethod(Method element, AnnotationSearchCriteria criteria) {
+                                              ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:176: error: illegal start of expression
+		 * Implementation notes:
+		 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:176: error: ';' expected
+		 * Implementation notes:
+		                 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: illegal start of expression
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                        ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                       ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                                  ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                                                         ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                                                                               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: not a statement
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                                                                                ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:179: error: ';' expected
+		 * arguments and whether the annotation is present) kicks off a recursive search. The recursion steps
+		                                                                                                     ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:181: error: illegal start of expression
+		 * eventually calls either `AnnotationSupport::findRepeatableAnnotations` or
+		 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:181: error: ';' expected
+		 * eventually calls either `AnnotationSupport::findRepeatableAnnotations` or
+		             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:181: error: illegal character: '`'
+		 * eventually calls either `AnnotationSupport::findRepeatableAnnotations` or
+		                           ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:181: error: illegal character: '`'
+		 * eventually calls either `AnnotationSupport::findRepeatableAnnotations` or
+		                                                                        ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:181: error: not a statement
+		 * eventually calls either `AnnotationSupport::findRepeatableAnnotations` or
+		                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: illegal character: '`'
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: not a statement
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: illegal character: '`'
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                     ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: not a statement
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: ';' expected
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: not a statement
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                     ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: ';' expected
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                              ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: ';' expected
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: ';' expected
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                                                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: orphaned case
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:182: error: illegal start of expression
+		 * `AnnotationSupport::findAnnotation` (depending on arguments, thus handling the repeatable case).
+		                                                                                                 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: illegal start of expression
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+        ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                  ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                          ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                      ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                              ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                  ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                           ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                  ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                      ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                          ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                                                     ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:183: error: case, default, or '}' expected
+private static <A extends Annotation> Stream<A> findOnOuterClasses(Optional<Class<?>> type, AnnotationSearchCriteria criteria) {
+                                                                                                                               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		     ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		      ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		        ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		                 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:185: error: case, default, or '}' expected
+		List<A> onMethod = context
+		                   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:186: error: case, default, or '}' expected
+				.getTestMethod()
+				^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:186: error: case, default, or '}' expected
+				.getTestMethod()
+				 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:186: error: case, default, or '}' expected
+				.getTestMethod()
+				              ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:186: error: case, default, or '}' expected
+				.getTestMethod()
+				               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		     ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		      ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		        ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                      ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                        ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                         ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                              ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                    ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                            ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                             ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                                              ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                                               ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                                                ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                                                 ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:187: error: case, default, or '}' expected
+		List<A> onThisClass = Arrays.asList(type.get().getAnnotationsByType(criteria.getAnnotationType()));
+		                                                                                                  ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:188: error: case, default, or '}' expected
+		if (!criteria.isFindAllEnclosing() && !onThisClass.isEmpty())
+		^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:188: error: case, default, or '}' expected
+		if (!criteria.isFindAllEnclosing() && !onThisClass.isEmpty())
+		   ^
+/home/compf/data/uni/master/sem4/github_projects/junit-pioneer/src/main/java/org/junitpioneer/internal/PioneerAnnotationUtils.java:188: error: case, default, or '}' expected
+		if (!criteria.isFindAllEnclosing() && !onThisClass.isEmpty())
+		    ^
+100 errors
+only showing the first 100 errors, of 196 total; use -Xmaxerrs if you would like to see more
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+
+BUILD FAILED in 1s
+2 actionable tasks: 1 executed, 1 up-to-date
